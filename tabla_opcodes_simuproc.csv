@@ -1,0 +1,53 @@
+codigo,nombre,sintaxis,descripcion
+01,LDA,LDA mem,Carga en AX el contenido de una dirección de memoria.
+02,STA,STA mem,Guarda el contenido de AX en una dirección de memoria.
+03,XAB,XAB,Intercambia los valores de AX y BX.
+04,CLA,CLA,Pone AX en cero.
+06,PUSH,PUSH registro,Guarda un registro en la pila.
+07,POP,POP registro,Recupera un valor de la pila en un registro.
+08,INC,INC destino,Incrementa el destino.
+09,DEC,DEC destino,Decrementa el destino.
+10,MOV,"MOV destino,origen",Copia el valor del origen en el destino.
+11,AND,"AND destino,origen",Realiza AND lógico entre destino y origen.
+12,NOT,NOT destino,Realiza NOT lógico sobre el destino.
+13,OR,"OR destino,origen",Realiza OR lógico entre destino y origen.
+14,XOR,"XOR destino,origen",Realiza XOR lógico entre destino y origen.
+15,ROL,"ROL destino,veces",Rota los bits del destino a la izquierda.
+16,ROR,"ROR destino,veces",Rota los bits del destino a la derecha.
+17,SHL,"SHL destino,veces",Desplaza los bits del destino a la izquierda.
+18,SHR,"SHR destino,veces",Desplaza los bits del destino a la derecha.
+20,ADD,ADD mem,Suma a AX el contenido de una dirección de memoria.
+21,SUB,SUB mem,Resta de AX el contenido de una dirección de memoria.
+22,MUL,MUL mem,Multiplica AX por el contenido de una dirección de memoria.
+23,DIV,DIV mem,Divide AX entre el contenido de una dirección de memoria.
+25,CLC,CLC,Limpia el carry flag.
+26,STC,STC,Activa el carry flag.
+27,CMC,CMC,Complementa el carry flag.
+29,LOOP,LOOP mem,Decrementa el registro CX en 1, salta a la dir de memoria si CX no es 0.
+30,JMP,JMP mem,Salta incondicionalmente a una dirección de memoria.
+31,JEQ,JEQ mem,Salta si Z=1, PC=contenido memoria, if(AX==mem)
+32,CMP,CMP mem,Compara AX con el contenido de una dirección de memoria y actualiza los flags.
+33,JME,JME mem,Salta si la comparación indica menor.
+34,JMA,JMA mem,Salta si la comparación indica mayor.
+35,JC,JC mem,Salta si el carry flag está activo.
+36,JNC,JNC mem,Salta si el carry flag no está activo.
+37,JO,JO mem,Salta si el overflow flag está activo.
+38,JNO,JNO mem,Salta si el overflow flag no está activo.
+39,JNE,JNE mem,Salta si el zero flag no está activo.
+40,LDT,LDT,Lee un dato del teclado.
+41,EAP,EAP,Imprime en pantalla el contenido del registro AX.
+42,MSG,MSG,Muestra el texto entre comillas.
+50,LDB,LDB mem,Carga en BX el contenido de una dirección de memoria.
+51,STB,STB mem,Guarda el contenido de BX en una dirección de memoria.
+55,LDF,LDF mem,Carga en los registros de punto flotante BX:AX el número IEEE 754 almacenado desde la dirección indicada.
+56,STF,STF mem,Guarda en memoria el número IEEE 754 contenido en BX:AX.
+60,ADDF,ADDF mem,Suma a BX:AX el número IEEE 754 de una dirección de memoria.
+61,SUBF,SUBF mem,Resta de BX:AX el número IEEE 754 de una dirección de memoria.
+62,MULF,MULF mem,Multiplica BX:AX por el número IEEE 754 de una dirección de memoria.
+63,DIVF,DIVF mem,Divide BX:AX entre el número IEEE 754 de una dirección de memoria.
+64,ITOF,ITOF,Convierte el entero de AX a punto flotante en BX:AX.
+65,FTOI,FTOI,Convierte el número de punto flotante de BX:AX a entero en AX.
+80,IN,"IN registro,puerto",Lee un valor desde un puerto y lo guarda en el registro.
+81,OUT,"OUT puerto,registro",Envía el valor de un registro a un puerto.
+90,NOP,NOP,No realiza ninguna operación.
+99,HLT,HLT,Detiene la ejecución del programa.
